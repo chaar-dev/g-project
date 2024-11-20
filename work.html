@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Level Control System</title>
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Water Level Control System</h1>
+      <div class="controls">
+        <div class="auto-mode">
+          <span>Auto Mode</span>
+          <input type="checkbox" id="auto-mode-switch" checked>
+        </div>
+        <span class="badge standby">System Standby</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Water Level Card -->
+      <div class="card water-level">
+        <h2><i class="icon-waves"></i> Water Level</h2>
+        <div class="water-level-display">
+          <div class="water-level-bar" style="height: 75%;"></div>
+          <span class="water-level-text">75%</span>
+        </div>
+      </div>
+
+      <!-- Water Quality Card -->
+      <div class="card water-quality">
+        <h2><i class="icon-flask"></i> Water Quality Parameters</h2>
+        <div class="parameters">
+          <div class="parameter">
+            <span>Temperature</span>
+            <span><i class="icon-thermometer"></i> 22°C</span>
+          </div>
+          <div class="parameter">
+            <span>pH Level</span>
+            <span><i class="icon-flask"></i> 7.2</span>
+          </div>
+          <div class="parameter">
+            <span>Pollution</span>
+            <span><i class="icon-alert"></i> 15%</span>
+          </div>
+          <div class="parameter">
+            <span>Pressure</span>
+            <span><i class="icon-gauge"></i> 2.5 bar</span>
+          </div>
+        </div>
+        <div class="alert">No issues detected</div>
+      </div>
+
+      <!-- System Controls -->
+      <div class="card system-controls">
+        <h2><i class="icon-settings"></i> System Controls</h2>
+        <div class="control">
+          <span>Pump Control</span>
+          <button class="pump-control">Turn On Pump</button>
+        </div>
+        <div class="control">
+          <span>Auto-control Thresholds</span>
+          <label for="min-level">Min Water Level: 20%</label>
+          <input type="range" id="min-level" min="0" max="100" value="20">
+          <label for="max-level">Max Water Level: 90%</label>
+          <input type="range" id="max-level" min="0" max="100" value="90">
+        </div>
+      </div>
+
+     
+
+      <!-- Recent Alerts -->
+      <div class="card alerts">
+        <h2><i class="icon-bell"></i> Recent Alerts</h2>
+        <div class="alert-list">
+          <div class="alert-item">
+            <span>12:45 PM - Pump manually started</span>
+          </div>
+          <div class="alert-item">
+            <span>11:30 AM - High pollution detected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
